@@ -71,6 +71,11 @@ Default name for the service file is sidekiq-env.service. This can be changed as
   set :service_unit_name, "sidekiq-#{fetch(:rails_env)}}.service"
 ```
 
+use rvm you can set bundle_path, for example:
+```ruby
+  set :bundler_path, '/usr/local/rvm/gems/ruby-2.6.1/wrappers/bundle'
+```
+
 ## Integration with upstart
 
 Set init system to upstart in the cap deploy config:
